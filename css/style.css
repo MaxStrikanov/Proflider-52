@@ -41,7 +41,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 35px 0px;
+  padding: 20px 0px;
   z-index: 1;
   border-bottom: 2px solid var(--black);
 }
@@ -59,6 +59,38 @@ header .logo {
 header .logo img {
   width: 200px;
   height: 45px;
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 15px;
+}
+.header-contacts .email,
+.header-contacts .phone
+{
+  align-items: center;
+  display: flex;
+}
+
+.header-contacts  ion-icon {
+  font-size: 1.8em;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.header-contacts a {
+  text-decoration: none;
+  color:#1779ff; 
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.header-contacts a:hover  {
+  transform: scale(1.1);
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
 }
 .menu {
   -webkit-box-align: center;
@@ -93,7 +125,7 @@ header .logo img {
 }
 .menu li {
   list-style: none;
-  margin-right: 15px;
+  margin-left: 15px;
 }
 .menu li a {
   text-decoration: none;
@@ -177,6 +209,10 @@ header .logo img {
 .btns.active ion-icon:nth-child(1) {
   display:none;
 }
+.conteiner:hover .title {
+  opacity: 1;
+}
+
 .title {
   font-size: 2.5em;
   opacity: 0.5;
@@ -1088,3 +1124,5 @@ svg circle:nth-child(2) {
 .ml-200 {
   margin-left: 200px;
 }
+
+
