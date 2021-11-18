@@ -24,7 +24,7 @@
 body {
   background: var(--white);
   font-family: 'Roboto', sans-serif;
-  background-image: url(images/skyscraper-bg15.png);
+  background-image: url(/images/skyscraper-bg15.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -1351,11 +1351,12 @@ svg circle:nth-child(2) {
   background: linear-gradient(to bottom, #5250516c, #1004fc0a);
 }
 .cardsBx .card:hover .icon i{
-  transform: scale(1.2);
+  /* transform: scale(1.2); */
 }
 .cardsBx .card:hover {
-  box-shadow: 0 15px 5px rgba(0, 0, 0, 0.5);
-  transform:translateY(-20px)
+  box-shadow: 0 12px 5px rgba(0, 0, 0, 0.5);
+  transform:translateY(-20px);
+  transition: transform 0.5s;
 }
 .icon {
   position: relative;
