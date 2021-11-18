@@ -9,4 +9,10 @@
     display: flex;
   
   }
+  .expertise-wrapper {
+    display: none;
+}
+.accordion {
+  display: block;
+}
 }
