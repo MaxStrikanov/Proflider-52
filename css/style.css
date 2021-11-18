@@ -424,6 +424,7 @@ section {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  padding: 0 20px;
 }
 .dots {
   align-items: flex-start;
@@ -1124,5 +1125,293 @@ svg circle:nth-child(2) {
 .ml-200 {
   margin-left: 200px;
 }
+/**************Аккордион***********************/
+.accordion {
+  width: 100%;
+  display: none;
+}
+.accordion .contentBx {
+  position: relative;
+  margin: 10px 20px;
+}
+.accordion .contentBx:last-child {
+  margin-bottom: 40px;
+}
+.accordion .contentBx .label {
+  position: relative;
+  font-size: 1.2em;
+  padding: 12px;
+  background: #1779ff;
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 20px 24px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.accordion .contentBx .contentAc {
+  position: relative;
+  height: 0;
+  background: var(--white);
+  overflow: hidden;
+  transition:0.5s;
+  overflow-y: auto;
+  line-height: 25px;
+  text-align: justify;
+}
 
+.accordion .contentBx.active .label ion-icon {
+  transform:rotate(90deg);
+}
+.accordion .contentBx.active .contentAc {
+  padding: 20px;
+  height: auto;
+}
+
+/***************************************************/
+
+/*********Форма объятной связи**************/
+.conteiner .formBx {
+  width:50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.conteiner .formBx form {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  padding: 0 0 0 75px
+}
+.conteiner .formBx form h2 {
+  color: #000;
+  font-size: 2em;
+  margin-bottom: 35px;
+}
+.conteiner .formBx form .inputBx {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.conteiner .formBx form .inputBx:last-child {
+  margin-bottom: 0px;
+}
+.conteiner .formBx form .inputBx input,
+.conteiner .formBx form .inputBx textarea {
+  position: relative;
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 100%;
+  color: var(--black);
+  padding-bottom: 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 300px;
+  border-bottom: 2px solid rgb(179, 177, 177);
+  resize: none;
+}
+.conteiner .formBx form .inputBx textarea {
+  height: 100px;
+}
+.conteiner .formBx form .inputBx input[type="submit"] {
+  background: #1779ff;
+  padding: 8px 20px;
+  cursor: pointer;
+  color: var(--white);
+  font-size: 18px;
+  border: none;
+}
+.conteiner .formBx form .inputBx input[type="submit"]:focus 
+{
+  background: #333;
+}
+.conteiner .formBx form .inputBx span {
+  position: absolute;
+  left: 0;
+  font-size: 16px;
+  font-weight: 300;
+  display: inline-block;
+  pointer-events:none;
+  letter-spacing: 1px;
+  color: rgb(179, 177, 177);
+  transition: all 0.2s;
+}
+.conteiner .formBx form .inputBx input:focus ~ span,
+.conteiner .formBx form .inputBx textarea:focus ~ span,
+.conteiner .formBx form .inputBx input:valid ~ span,
+.conteiner .formBx form .inputBx textarea:valid ~ span {
+  transform: translateY(-24px);
+  color: #1779ff;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.conteiner .formBx form .inputBx input:focus,
+.conteiner .formBx form .inputBx textarea:focus,
+.conteiner .formBx form .inputBx input:valid,
+.conteiner .formBx form .inputBx textarea:valid {
+
+  border-bottom-color: #1779ff;
+}
+
+.imgBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.imgBx::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background:chartreuse;
+  transform-origin: bottom;
+  transform: skew(-25deg) translateX();
+
+}
+.imgBx img {
+  position: absolute;
+  bottom: 0;
+  max-height: 95%;
+}
+
+@media (max-width: 991px) {
+  .conteiner .formBx {
+    width:100%;
+    padding: 0 50px;
+  }
+  .conteiner .formBx form {
+    
+    width: 100%;
+    padding: 0;
+  }
+  .imgBx {
+    display: none;
+  }
+}
+/******************************************/
+
+/************О нас******************/
+.cardsBx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cardsBx > .card {
+  position: relative;
+  width: 280px;
+  height: 275px;
+  background: #5f9cff;
+  margin: 30px;
+  border-radius: 20px;
+  border-bottom-left-radius: 152px;
+  border-bottom-right-radius: 152px;
+  box-shadow: 0 4px 0 #fff, inset 0 -8px 0 rgb(255 255 255 / 44%), 0 13px 0 rgb(0 0 0 / 15%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.cardsBx > .card::before {
+  content: '';
+  position: absolute;
+  top: -140px;
+  left: -40%;
+  width: 100%;
+  height: 120%;
+  background: linear-gradient(90deg, transparent,  rgba(255,255,255, 0.1));
+  transform: rotate(35deg);
+  pointer-events: none;
+  filter: blur(5px);
+}
+
+.cardsBx > .card:nth-child(1) {
+  background: linear-gradient(to bottom, #5250516c, #1004fc0a);
+}
+.cardsBx .card:nth-child(2) {
+  background: linear-gradient(to bottom, #5250516c, #1004fc0a);
+}
+.cardsBx .card:nth-child(3) {
+  background: linear-gradient(to bottom, #5250516c, #1004fc0a);
+}
+.cardsBx .card:nth-child(4) {
+  background: linear-gradient(to bottom, #5250516c, #1004fc0a);
+}
+.cardsBx .card:nth-child(5) {
+  background: linear-gradient(to bottom, #5250516c, #1004fc0a);
+}
+.cardsBx .card:nth-child(6) {
+  background: linear-gradient(to bottom, #5250516c, #1004fc0a);
+}
+.cardsBx .card:hover .icon i{
+  transform: scale(1.2);
+}
+.cardsBx .card:hover {
+  box-shadow: 0 15px 5px rgba(0, 0, 0, 0.5);
+  transform:translateY(-20px)
+}
+.icon {
+  position: relative;
+  width: 140px;
+  height: 120px;
+  background: transparent;
+  /* border-bottom-right-radius: 100px; */
+  /* border-bottom-left-radius: 100px; */
+  /* box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1),
+inset 0 -8px 0 #fff; */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+.icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50px;
+  border-top-right-radius: 50px;
+  /* box-shadow: 15px -15px 0 15px #fff; */
+  width: 50px;
+  height: 50px;
+  background: transparent;
+}
+.icon::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 140px;
+  border-top-left-radius: 50px;
+  /* box-shadow: -15px -15px 0 15px #fff; */
+  width: 50px;
+  height: 50px;
+  background: transparent;
+}
+.icon i {
+  margin-top: 30px;
+  color: rgb(13, 55, 192);
+  position: relative;
+  font-size: 4.5em;
+  z-index: 1000;
+  --ionicon-stroke-width: 24px;
+}
+.cardsBx > .card .content {
+  position: absolute;
+  width: 100%;
+  padding: 30px;
+  padding-top: 140px;
+  text-align: center;
+}
+.cardsBx > .card .content h2 {
+  font-size: 1.75;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.cardsBx > .card .content p {
+  color: #fff;
+}
