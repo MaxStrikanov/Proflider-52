@@ -214,11 +214,12 @@ header .logo img {
 }
 
 .title {
-  font-size: 2.5em;
-  opacity: 0.5;
-  margin-bottom: 50px;
-  margin-top: 60px;
-  text-shadow: 4px 1px 2px #1779ff;
+    padding-left: 30px;
+    font-size: 2.5em;
+    opacity: 0.5;
+    margin-bottom: 50px;
+    margin-top: 60px;
+    text-shadow: 4px 1px 2px #1779ff;
 }
 .sub_title {
   display: block;
