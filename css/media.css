@@ -27,4 +27,15 @@
     margin-bottom: 30px;
     height: auto;
   }
+  .inspection .container {
+    
+    flex-direction: column;
+    
+  }
+  .container .cards {
+    margin-bottom: 35px;
+  }
+  .arrow-right-5 {
+    display: none;
+  }
 }
