@@ -11,8 +11,20 @@
   }
   .expertise-wrapper {
     display: none;
-}
+  }
 .accordion {
-  display: block;
+    display: block;
+  }
 }
+
+@media (max-width: 576px )
+{
+    .d-flex {
+      flex-direction: column;
+      display: block;
+  }
+  .stage-box-wrapper {
+    margin-bottom: 30px;
+    height: auto;
+  }
 }
