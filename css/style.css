@@ -148,14 +148,14 @@ header .logo img {
 .navigation {
   position: absolute;
   top: 0px;
-  padding: 50px;
+  padding: 40px;
   left: -100%;
   width: 100%;
-  height: fit-content;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   background: var(--white);
   z-index: 100;
   transition: 0.5s;
@@ -1418,4 +1418,34 @@ inset 0 -8px 0 #fff; */
 }
 .cardsBx > .card .content p {
   color: #fff;
+}
+footer {
+  box-shadow: 1px 3px 11px 5px rgb(0 0 0 / 24%);
+  overflow: hidden;
+}
+.footer-contacts {
+  padding: 0 20px;
+  line-height: 35px;
+}
+.footer-wrapper {
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.footer-map {
+  width: 50%;
+}
+.footer-link-msg i {
+  color: #1779ff;
+  font-size: 1.8em;
+}
+.working-time a {
+  text-decoration: none;
+  color: #1779ff;
+  font-size: 1.3em;
+}
+.working-time i {
+  margin: 0 10px;
+  /
 }
