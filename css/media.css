@@ -32,6 +32,16 @@
     order: 2;
     margin: auto;
   }
+  .footer-wrapper {
+    flex-direction: column;
+  }
+  .footer-contacts {
+    margin: auto;
+  }
+  .footer-map {
+    padding-left: 10px;
+    width: 98%;
+}
 }
 
 @media (max-width: 576px )
