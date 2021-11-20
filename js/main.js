@@ -9,7 +9,6 @@ const accordionContent = document.querySelectorAll('.contentBx > .contentAc');
 accordionTitle.forEach((item, i) => {
     item.addEventListener('click', () => {
         item.classList.toggle('active');
-        
     })
 })
 
@@ -349,4 +348,4 @@ sliderEl.addEventListener('mousemove', stopAutoSlide);
 sliderEl.addEventListener('touchstart', stopAutoSlide);
 timer = setTimeout(autoSlide, 4000);    
 
-ScrollReveal().reveal('.card',{  delay: 500 });
+// ScrollReveal().reveal('.card',{  delay: 500 });
