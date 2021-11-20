@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 * {
@@ -253,7 +260,9 @@ header .logo img {
 }
 .btns.menuToggle ion-icon {
   font-size: 3em;
-
+}
+.menuToggle {
+  z-index: 200;
 }
 .btns.active ion-icon:nth-child(2) {
   display:block;
@@ -414,8 +423,8 @@ section {
   left: 0;
   width: 100%;
   height: 3px;
-  background: -o-linear-gradient(left, transparent, #1779ff);
   background: -webkit-gradient(linear, left top, right top, from(transparent), to(#1779ff));
+  background: -o-linear-gradient(left, transparent, #1779ff);
   background: linear-gradient(to right, transparent, #1779ff);
   -webkit-animation: animate1 2s linear infinite;
           animation: animate1 2s linear infinite;
@@ -446,8 +455,8 @@ section {
   right: 0;
   width: 3px;
   height: 100%;
-  background: -o-linear-gradient(top, transparent, #1779ff);
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#1779ff));
+  background: -o-linear-gradient(top, transparent, #1779ff);
   background: linear-gradient(to bottom, transparent, #1779ff);
   -webkit-animation: animate2 2s linear infinite;
           animation: animate2 2s linear infinite;
@@ -480,8 +489,8 @@ section {
   left: 0;
   width: 100%;
   height: 3px;
-  background: -o-linear-gradient(right, transparent, #1779ff);
   background: -webkit-gradient(linear, right top, left top, from(transparent), to(#1779ff));
+  background: -o-linear-gradient(right, transparent, #1779ff);
   background: linear-gradient(to left, transparent, #1779ff);
   -webkit-animation: animate3 2s linear infinite;
           animation: animate3 2s linear infinite;
@@ -512,8 +521,8 @@ section {
   left: 0;
   width: 3px;
   height: 100%;
-  background: -o-linear-gradient(bottom, transparent, #1779ff);
   background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#1779ff));
+  background: -o-linear-gradient(bottom, transparent, #1779ff);
   background: linear-gradient(to top, transparent, #1779ff);
   -webkit-animation: animate4 2s linear infinite;
           animation: animate4 2s linear infinite;
@@ -612,8 +621,8 @@ section {
   border: none;
   height: 2px;
   background-image: -o-linear-gradient(left, #FFF, rgb(14, 180, 192));
-  background-image: -o-linear-gradient(right, #FFF, rgb(14 52 192));
   background-image: -webkit-gradient(linear, right top, left top, from(#FFF), to(rgb(14 52 192)));
+  background-image: -o-linear-gradient(right, #FFF, rgb(14 52 192));
   background-image: linear-gradient(to left, #FFF, rgb(14 52 192));
   width: 100%;
 }
@@ -1130,23 +1139,23 @@ section {
               transform: translate(-50%, -50%);
   }
   .sl-nav-arrow-left {
-      background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.7) 0, transparent 100%);
       background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(0, 0, 0, 0.7)), to(transparent));
+      background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.7) 0, transparent 100%);
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0, transparent 100%);
   }
   .sl-nav-arrow-left:active {
-      background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.9) 0, transparent 100%);
       background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(0, 0, 0, 0.9)), to(transparent));
+      background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.9) 0, transparent 100%);
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0, transparent 100%);
   }
   .sl-nav-arrow-right {
-      background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.7) 0, transparent 100%);
       background-image: -webkit-gradient(linear, right top, left top, color-stop(0, rgba(0, 0, 0, 0.7)), to(transparent));
+      background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.7) 0, transparent 100%);
       background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7) 0, transparent 100%);
   }
   .sl-nav-arrow-right:active {
-      background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.9) 0, transparent 100%);
       background-image: -webkit-gradient(linear, right top, left top, color-stop(0, rgba(0, 0, 0, 0.9)), to(transparent));
+      background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.9) 0, transparent 100%);
       background-image: linear-gradient(to left, rgba(0, 0, 0, 0.9) 0, transparent 100%);
   }
   /* Фикс для ресайза */ 
@@ -1492,18 +1501,18 @@ svg circle:nth-child(2) {
   font-size: 1.2em;
   padding: 12px;
   background: #1779ff;
-  color: var(--white);
+  color: var(--black);
   cursor: pointer;
   border-radius: 20px 24px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .accordion .contentBx .contentAc {
@@ -1527,6 +1536,7 @@ svg circle:nth-child(2) {
 .accordion .contentBx.active .contentAc {
   padding: 20px;
   height: auto;
+  color: var(--black);
 }
 
 /***************************************************/
@@ -1717,8 +1727,8 @@ svg circle:nth-child(2) {
   left: -40%;
   width: 100%;
   height: 120%;
-  background: -o-linear-gradient(left, transparent,  rgba(255,255,255, 0.1));
   background: -webkit-gradient(linear, left top, right top, from(transparent),  to(rgba(255,255,255, 0.1)));
+  background: -o-linear-gradient(left, transparent,  rgba(255,255,255, 0.1));
   background: linear-gradient(90deg, transparent,  rgba(255,255,255, 0.1));
   -webkit-transform: rotate(35deg);
       -ms-transform: rotate(35deg);
@@ -1729,33 +1739,33 @@ svg circle:nth-child(2) {
 }
 
 .cardsBx > .card:nth-child(1) {
-  background: -o-linear-gradient(top, #5250516c, #1004fc0a);
   background: -webkit-gradient(linear, left top, left bottom, from(#5250516c), to(#1004fc0a));
+  background: -o-linear-gradient(top, #5250516c, #1004fc0a);
   background: linear-gradient(to bottom, #5250516c, #1004fc0a);
 }
 .cardsBx .card:nth-child(2) {
-  background: -o-linear-gradient(top, #5250516c, #1004fc0a);
   background: -webkit-gradient(linear, left top, left bottom, from(#5250516c), to(#1004fc0a));
+  background: -o-linear-gradient(top, #5250516c, #1004fc0a);
   background: linear-gradient(to bottom, #5250516c, #1004fc0a);
 }
 .cardsBx .card:nth-child(3) {
-  background: -o-linear-gradient(top, #5250516c, #1004fc0a);
   background: -webkit-gradient(linear, left top, left bottom, from(#5250516c), to(#1004fc0a));
+  background: -o-linear-gradient(top, #5250516c, #1004fc0a);
   background: linear-gradient(to bottom, #5250516c, #1004fc0a);
 }
 .cardsBx .card:nth-child(4) {
-  background: -o-linear-gradient(top, #5250516c, #1004fc0a);
   background: -webkit-gradient(linear, left top, left bottom, from(#5250516c), to(#1004fc0a));
+  background: -o-linear-gradient(top, #5250516c, #1004fc0a);
   background: linear-gradient(to bottom, #5250516c, #1004fc0a);
 }
 .cardsBx .card:nth-child(5) {
-  background: -o-linear-gradient(top, #5250516c, #1004fc0a);
   background: -webkit-gradient(linear, left top, left bottom, from(#5250516c), to(#1004fc0a));
+  background: -o-linear-gradient(top, #5250516c, #1004fc0a);
   background: linear-gradient(to bottom, #5250516c, #1004fc0a);
 }
 .cardsBx .card:nth-child(6) {
-  background: -o-linear-gradient(top, #5250516c, #1004fc0a);
   background: -webkit-gradient(linear, left top, left bottom, from(#5250516c), to(#1004fc0a));
+  background: -o-linear-gradient(top, #5250516c, #1004fc0a);
   background: linear-gradient(to bottom, #5250516c, #1004fc0a);
 }
 .cardsBx .card:hover .icon i{
@@ -1845,6 +1855,7 @@ footer {
   padding: 0 20px;
   line-height: 35px;
   -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+  -moz-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6) inset;
   box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6) inset;
 }
 .footer-wrapper {
