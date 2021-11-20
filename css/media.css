@@ -1,23 +1,25 @@
 @media (max-width: 1060px )
 {
   .header-contacts a {
-    
     font-size: 1em;
-    
   }
-  
 }
 
 @media (max-width: 768px ){
   header {
     padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
   .menu {
     display: none;
   }
   .rightSide {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   
   }
@@ -28,12 +30,19 @@
     display: block;
   }
   .flex-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    order: 2;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     margin: auto;
   }
   .footer-wrapper {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .footer-contacts {
     margin: auto;
@@ -41,23 +50,27 @@
   .footer-map {
     padding-left: 10px;
     width: 98%;
-}
+  }
 }
 
 @media (max-width: 576px )
 {
-    .d-flex {
-      flex-direction: column;
-      display: block;
+  .d-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: block;
   }
   .stage-box-wrapper {
     margin-bottom: 30px;
     height: auto;
   }
   .inspection .container {
-    
-    flex-direction: column;
-    
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .container .cards {
     margin-bottom: 35px;
@@ -71,7 +84,17 @@
     margin-left: 0;
   } 
   .header-contacts .email {
-    
     margin-right: 15px;
+  }
+  .header-contacts {
+    margin-top: 19px;
+    margin-bottom: 10px;
+  }
+  .cardsBx > .card {
+    height: 255px;
+  }
+  .cardsBx > .card .content {
+    
+    padding-top: 120px; 
   }
 }
