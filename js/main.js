@@ -2,9 +2,9 @@ const dayNight = document.querySelector('.dayNight');
 const menuToggle = document.querySelector('.menuToggle');
 const body = document.querySelector('body');
 const navigation = document.querySelector('.navigation');
+const menuItem = document.querySelectorAll('.nav-link');
 const accordionTitle = document.querySelectorAll('.contentBx ');
 const accordionContent = document.querySelectorAll('.contentBx > .contentAc');
-
 
 accordionTitle.forEach((item, i) => {
     item.addEventListener('click', () => {
@@ -13,29 +13,23 @@ accordionTitle.forEach((item, i) => {
 })
 
  //табы
-
 const tabs = () => {
     const tabHeader = document.querySelector('.dots');
     const tab = document.querySelectorAll('.dot');
     const tabContent = document.querySelectorAll('.exContent');  
     const toggleTabContent = (index) => {
 
-        for( let i = 0; i < tabContent.length; i++){
-
-        if(index === i){
-
-        tab[i].classList.add('active');
-        tabContent[i].classList.remove('d-none');
-
-        } else {
-
-        tab[i].classList.remove('active');
-        tabContent[i].classList.add('d-none');
-
-        }
+    for( let i = 0; i < tabContent.length; i++){
+    if(index === i){
+    tab[i].classList.add('active');
+    tabContent[i].classList.remove('d-none');
+    } else {
+    tab[i].classList.remove('active');
+    tabContent[i].classList.add('d-none');
+    }
     }
 }
-  
+
 tabHeader.addEventListener('click', (e) => {
     
     let target = e.target;
@@ -43,11 +37,11 @@ tabHeader.addEventListener('click', (e) => {
 
     if (target){
        tab.forEach((item, i) => {
-         if(item === target){
-           toggleTabContent(i);
-       }
-      }); 
-     } 
+        if(item === target){
+        toggleTabContent(i);
+    }
+    }); 
+    } 
  });
 };
 
@@ -62,6 +56,12 @@ menuToggle.onclick = () => {
   menuToggle.classList.toggle('active')
   navigation.classList.toggle('active')
 }
+navigation.addEventListener('click', (e) => {
+    if (e.target.classList.contains('nav-link')) {
+        navigation.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    }
+})
 
 
 const swiper = new Swiper('.slider-rewies', {
@@ -147,17 +147,17 @@ class Slider {
       this.halfHeight = this.contentE0.offsetHeight / 2;
       this.zDistance = htmlStyles.getPropertyValue('--z-distance');
       if (!isMobile && !this.mouseWatched) {
-          this.mouseWatched = true;
-          this.el.addEventListener('mousemove', this.onMouseMove);
-          this.el.style.setProperty(
-              '--img-prev', 
-              `url(${this.images[+this.activeImg[0].dataset.id - 1].src})`
-          );
-          this.contentEl.style.setProperty('transform', `translateZ(${this.zDistance})`);
-          } else if (isMobile && this.mouseWatched) {
-          this.mouseWatched = false;
-          this.el.removeEventListener('mousemove', this.onMouseMove);
-          this.contentEl.style.setProperty('transform', 'none');
+        this.mouseWatched = true;
+        this.el.addEventListener('mousemove', this.onMouseMove);
+        this.el.style.setProperty(
+            '--img-prev', 
+            `url(${this.images[+this.activeImg[0].dataset.id - 1].src})`
+        );
+        this.contentEl.style.setProperty('transform', `translateZ(${this.zDistance})`);
+        } else if (isMobile && this.mouseWatched) {
+        this.mouseWatched = false;
+        this.el.removeEventListener('mousemove', this.onMouseMove);
+        this.contentEl.style.setProperty('transform', 'none');
       }
   }
   getMouseCoefficients ({ clientX, clientY } = {}) {
@@ -177,8 +177,8 @@ class Slider {
   }
   runAnimation () {
       if (this.animationStopped) {
-          this.animationRunning = false;
-          return;
+        this.animationRunning = false;
+        return;
       }
       const maxX = 10;
       const maxY = 10;
