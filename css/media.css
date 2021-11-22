@@ -100,4 +100,19 @@
   .title {
     margin-bottom: 5px;
   }
+  .sl-nav-dot {
+    margin: 0px 10px;
+    width: 15px;
+    height: 15px;
+  }
+  .sl-nav-dots::before {
+   
+    left: 22px;
+    top: 12px;
+    width: 15px;
+    height: 15px;
+    -webkit-transform: translateX(calc(35px * (var(--from-left) - 1)));
+    -ms-transform: translateX(calc(35px * (var(--from-left) - 1)));
+    transform: translateX(calc(35px * (var(--from-left) - 1)));
+  }
 }
