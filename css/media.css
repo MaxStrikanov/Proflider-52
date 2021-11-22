@@ -115,4 +115,10 @@
     -ms-transform: translateX(calc(35px * (var(--from-left) - 1)));
     transform: translateX(calc(35px * (var(--from-left) - 1)));
   }
+  .menuToggle {
+    z-index: 1001;
+  }
+  .navigation {
+    z-index: 1001;
+  }
 }
