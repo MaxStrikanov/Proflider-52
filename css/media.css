@@ -41,9 +41,10 @@
   .footer-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0 10px;
+}
   .footer-contacts {
     margin: auto;
   }
