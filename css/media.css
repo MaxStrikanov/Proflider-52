@@ -94,11 +94,14 @@
     height: 255px;
   }
   .cardsBx > .card .content {
-    
     padding-top: 120px; 
   }
   .title {
     margin-bottom: 5px;
+    font-size: 2.1em;
+  }
+  .line {
+    display: none;
   }
   .sl-nav-dot {
     margin: 0px 10px;
@@ -106,7 +109,6 @@
     height: 15px;
   }
   .sl-nav-dots::before {
-   
     left: 22px;
     top: 12px;
     width: 15px;
