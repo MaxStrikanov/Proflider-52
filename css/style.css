@@ -1298,7 +1298,7 @@ section {
   padding: 30px 20px 10px;
   background: #337AB7;
   z-index: 1;
-  color: var(--black);
+  color: #fff;
   border-radius: 10px;
   font-weight: 800;
   font-size: 18px;
@@ -1321,12 +1321,15 @@ section {
   -webkit-transition-delay: 0s, 0.5s, 0.5s, 0s;
        -o-transition-delay: 0s, 0.5s, 0.5s, 0s;
           transition-delay: 0s, 0.5s, 0.5s, 0s;
-  bottom: -70px;
+  bottom: 70px;
   z-index: 1;
   -webkit-transform: translateX(-50%) translateY(-100px);
       -ms-transform: translateX(-50%) translateY(-100px);
           transform: translateX(-50%) translateY(-100px);
-  padding: 10px 20px 10px;
+  /* padding: 10px 20px 10px; */
+  -webkit-transition: bottom 0.1s;
+  -o-transition: bottom 0.1s;
+  transition: bottom 0.1s;
 }
 /* .card:nth-child(1) .text {
   background: #ff0461;
