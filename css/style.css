@@ -1290,7 +1290,7 @@ section {
 .text {
   position: absolute;
   bottom: -42px;
-  left: 50%;
+  left: 33%;
   -webkit-transform: translateX(-50%) ;
       -ms-transform: translateX(-50%) ;
           transform: translateX(-50%) ;
