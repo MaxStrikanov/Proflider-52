@@ -62,7 +62,24 @@ navigation.addEventListener('click', (e) => {
         menuToggle.classList.toggle('active');
     }
 })
-
+//*********scroll Top **********//
+if(arrowTop){
+    arrowTop.onclick = function(e) {
+	    e.preventDefault();
+	    var scrollToTop = window.setInterval(function() {
+	        var pos = window.pageYOffset;
+	        if ( pos > 0 ) {
+	            window.scrollTo( 0, pos - 200 );
+	        } else {
+	            window.clearInterval( scrollToTop );
+	        }
+	    }, 32);
+	}
+	window.addEventListener('scroll', function() {
+		arrowTop.hidden = (pageYOffset < document.documentElement.clientHeight);
+	});
+}
+//*****************************//
 
 const swiper = new Swiper('.slider-rewies', {
   // Optional parameters
@@ -349,3 +366,4 @@ sliderEl.addEventListener('touchstart', stopAutoSlide);
 timer = setTimeout(autoSlide, 4000);    
 
 // ScrollReveal().reveal('.card',{  delay: 500 });
+AOS.init();
