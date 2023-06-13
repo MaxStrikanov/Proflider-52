@@ -11,7 +11,7 @@ if ($_POST['act'] == 'order') {
     $name = ($_POST['name']);
     $phone = ($_POST['phone']);
     $email = ($_POST['email']);
-    msg = ($_POST['msg']);
+    $msg = ($_POST['msg']);
 
 //Собираем в массив то, что будет передаваться боту
     $arr = array(
