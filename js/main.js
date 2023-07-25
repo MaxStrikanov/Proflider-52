@@ -366,4 +366,4 @@ sliderEl.addEventListener('touchstart', stopAutoSlide);
 timer = setTimeout(autoSlide, 4000);    
 
 // ScrollReveal().reveal('.card',{  delay: 500 });
-AOS.init();
+/*AOS.init();*/
