@@ -80,7 +80,7 @@ if(arrowTop){
 	});
 }
 //*****************************//
-
+/*
 const swiper = new Swiper('.slider-rewies', {
   // Optional parameters
   loop: true,
@@ -127,7 +127,7 @@ const swiper = new Swiper('.slider-rewies', {
     },
 }
 });
-
+*/
 
 function lerp({ x, y }, { x: targetX, y: targetY }) {
   const fraction = 0.1; 
